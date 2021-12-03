@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .circle {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1.5s linear forwards;
+      }
+
+      .check {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1.5s 500ms linear forwards;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg
+        width="50"
+        height="50"
+        viewBox="0 0 120 120"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="check"
+          d="M37.5 25L31.0759 75.0795C30.7118 77.9176 34.1495 79.6058 36.1728 77.5825L104.255 9.50001"
+          stroke="#A8FFA0"
+          stroke-width="10"
+        />
+        <path
+          class="circle"
+          d="M74.4545 7.83686C64.0057 2.87327 52.1592 1.68618 40.9333 4.47788C29.7075 7.26957 19.7969 13.8673 12.8903 23.1469C5.98359 32.4265 2.50817 43.8138 3.05617 55.3686C3.60416 66.9234 8.14167 77.9307 15.8955 86.515C23.6494 95.0993 34.1399 100.73 45.5796 102.446C57.0192 104.163 68.7003 101.86 78.6324 95.93C88.5644 89.9998 96.133 80.8093 100.049 69.9243C103.964 59.0394 103.984 47.1336 100.106 36.2354"
+          stroke="#90FF69"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
